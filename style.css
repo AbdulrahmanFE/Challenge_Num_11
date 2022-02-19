@@ -22,18 +22,17 @@
     background-color: var(--LightGrayishBlue);
     font-size: 13px;
     font-family: 'Barlow Semi Condensed', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
   }
 /* Styling The Testimonials */
   .testimonials {
-    max-width: 80%;
+    max-width: 1250px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 35px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    justify-content: center;
   }
   .box {
     display: flex;
