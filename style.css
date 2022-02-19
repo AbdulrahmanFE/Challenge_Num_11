@@ -28,7 +28,7 @@
     margin: 0;
   }
   body {
-    min-height: 95vh;
+    min-height: 90vh;
     background-color: var(--LightGrayishBlue);
     font-size: 13px;
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -38,7 +38,7 @@
     max-width: 1105px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 120px auto;
+    margin: 150px auto;
     justify-content: center;
     gap: 25px 30px;
   }
@@ -108,13 +108,14 @@
     font-size: 11px;
   }
   .description {
-    font-size: 1.28rem;
+    font-size: 1.25rem;
+    font-weight: 600;
   }
   .quote {
     opacity: 70%;
-    line-height: 1.5;
+    line-height: 20px;
     font-size: 0.83rem;
-    padding-top: 15px;
+    padding-top: 10px;
   }
         /* ------ Make it Responsive ------ */
   @media (max-width: 1349px)
