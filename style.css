@@ -1,0 +1,152 @@
+/* Variables */
+:root {
+  /* ---- Primary ---- */
+    --ModerateViolet: hsl(263, 55%, 52%);
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --VeryDarkBlackishBlue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+  /* ---- Neutral ---- */
+    --LightGray: hsl(0, 0%, 81%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+/* 
+1."Verified Graduate" has the same color as the person's name with 50% opacity
+2.Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+*/
+/* Global Rules */
+  span {
+    display: block;
+  }
+  body {
+    min-height: 100vh;
+    background-color: var(--LightGrayishBlue);
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+/* Styling The Testimonials */
+  .testimonials {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 35px;
+    border-radius: 7px;
+    gap: 10px;
+  }
+  .one {
+    background-color: var(--ModerateViolet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 20%;
+    grid-column: span 2;
+    color: var(--White);
+  }
+  .two {
+    background-color: var(--VeryDarkGrayishBlue);
+    color: var(--White);
+  }
+  .there,
+  .four {
+    background-color: var(--White);
+    color: var(--VeryDarkGrayishBlue);
+  }
+  .there {
+    grid-row: span 2;
+  }
+  .five {
+    background-color: var(--VeryDarkBlackishBlue);
+    grid-column: span 2;
+    color: var(--White);
+  }
+  .image-author {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+  }
+  .image-author > img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  .one .image-author > img {
+    border: 2px solid var(--LightGray);
+  }
+  .five .image-author > img {
+    border: 2px solid var(--ModerateViolet);
+  }
+  .one .author,
+  .two .author,
+  .five .author {
+  font-weight: 500;
+  }
+  .verified {
+    opacity: 50%;
+    font-size: 11px;
+  }
+  .description {
+    font-size: 22px;
+    margin: 0;
+  }
+  .quote {
+    opacity: 70%;
+    line-height: 1.5;
+    font-size: 0.93rem;
+    padding-top: 7px;
+  }
+  /* Make it Responsive */
+  @media (max-width: 1349px)
+  {
+    .testimonials {
+      max-width: 100%;
+      grid-template-columns: repeat(2 , 400px);
+      margin:auto;
+    }
+  }
+  @media (max-width: 991px) {
+    .testimonials {
+      max-width: 100%;
+      grid-template-columns: repeat(2 , 300px);
+      margin: auto;
+    }
+  }
+  @media (max-width: 767px) {
+    .testimonials {
+      max-width: 85%;
+      grid-template-columns: repeat(4 , 1fr);
+      margin: auto;
+    }
+    .box {
+      grid-column: span 4;
+      grid-row: span 1;
+    }
+  }
+  @media (max-width: 499px) {
+    .testimonials {
+      max-width: 100%;
+    }
+    .box {
+      padding: 35px;
+    }
+    .one {
+      background-position: top right 10%;
+    }
+    .there {
+      grid-row:  5;
+    }
+    .description {
+      font-size: 1.4rem;
+    }
+    .quote {
+      font-size: 0.897rem;
+    }
+  }
