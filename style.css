@@ -9,30 +9,39 @@
     --LightGray: hsl(0, 0%, 81%);
     --LightGrayishBlue: hsl(210, 46%, 95%);
 }
-/* 
-1."Verified Graduate" has the same color as the person's name with 50% opacity
-2.Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
-*/
+/* To Tackle The Accessibility Issue */
+  .hidden {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+  }
 /* Global Rules */
-  span {
-    display: block;
+  p {
+    margin: 0;
   }
   body {
     min-height: 100vh;
     background-color: var(--LightGrayishBlue);
     font-size: 13px;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 /* Styling The Testimonials */
   .testimonials {
-    max-width: 1250px;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 35px;
-    margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    justify-content: center;
   }
   .box {
     display: flex;
@@ -40,6 +49,9 @@
     padding: 20px 35px;
     border-radius: 7px;
     gap: 10px;
+    -webkit-box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 25%);
+    -moz-box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 25%);
+    box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 25%);
   }
   .one {
     background-color: var(--ModerateViolet);
@@ -94,13 +106,12 @@
   }
   .description {
     font-size: 22px;
-    margin: 0;
   }
   .quote {
     opacity: 70%;
     line-height: 1.5;
-    font-size: 0.93rem;
-    padding-top: 7px;
+    /* font-size: 0.92rem; */
+    padding-top: 10px;
   }
   /* Make it Responsive */
   @media (max-width: 1349px)
