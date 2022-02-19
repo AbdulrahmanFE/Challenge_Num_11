@@ -38,7 +38,7 @@
     max-width: 1105px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 150px auto;
+    margin: 175px auto;
     justify-content: center;
     gap: 25px 30px;
   }
